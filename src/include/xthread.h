@@ -1,7 +1,7 @@
 // -*- C++ -*-
 
-#ifndef _XTHREAD_H_
-#define _XTHREAD_H_
+#ifndef XTHREAD_H_
+#define XTHREAD_H_
 
 #include <errno.h>
 

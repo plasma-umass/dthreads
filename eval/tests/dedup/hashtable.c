@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-
+#include <pthread.h>
 
 #include "hashtable.h"
 #include "hashtable_private.h"

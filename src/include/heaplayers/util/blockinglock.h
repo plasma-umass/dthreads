@@ -1,7 +1,7 @@
 // -*- C++ -*-
 
-#ifndef _BLOCKINGLOCK_H_
-#define _BLOCKINGLOCK_H_
+#ifndef BLOCKINGLOCK_H_
+#define BLOCKINGLOCK_H_
 
 #if defined(_WIN32)
 #include "winlock.h"

@@ -1,5 +1,5 @@
-#ifndef _DEBUG_H_
-#define _DEBUG_H_
+#ifndef DTHREADS_DEBUG_H_
+#define DTHREADS_DEBUG_H_
 
 /*
   This program is free software; you can redistribute it and/or modify

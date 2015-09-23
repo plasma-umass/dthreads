@@ -4,11 +4,11 @@ NCORES ?= 8
 
 #CC = gcc -m32 -march=core2 -mtune=core2
 #CXX = g++ -m32 -march=core2 -mtune=core2
-CC = gcc -march=core2 -mtune=core2
-CXX = g++ -march=core2 -mtune=core2
-CFLAGS += -O5
+CC = gcc # -march=core2 -mtune=core2
+CXX = g++ # -march=core2 -mtune=core2
+CFLAGS += -O3
 
-CONFIGS = pthread dthread dmp_o dmp_b
+CONFIGS = pthread # dthread dmp_o dmp_b
 PROGS = $(addprefix $(TEST_NAME)-, $(CONFIGS))
 
 .PHONY: default all clean
@@ -25,18 +25,19 @@ eval: $(addprefix eval-, $(CONFIGS))
 PTHREAD_CFLAGS = $(CFLAGS)
 PTHREAD_LIBS += $(LIBS) -lpthread
 
-PTHREAD_OBJS = $(addprefix obj/, $(addsuffix -pthread.o, $(TEST_FILES)))
+# PTHREAD_OBJS = $(addprefix obj/, $(addsuffix -pthread.o, $(TEST_FILES)))
+PTHREAD_OBJS = $(addsuffix -pthread.o, $(TEST_FILES))
 
-obj/%-pthread.o: %-pthread.c
+%-pthread.o: %-pthread.c
 	$(CC) $(PTHREAD_CFLAGS) -c $< -o $@ -I$(HOME)/include
 
-obj/%-pthread.o: %.c
+%-pthread.o: %.c
 	$(CC) $(PTHREAD_CFLAGS) -c $< -o $@ -I$(HOME)/include
 
-obj/%-pthread.o: %-pthread.cpp
+%-pthread.o: %-pthread.cpp
 	$(CXX) $(PTHREAD_CFLAGS) -c $< -o $@ -I$(HOME)/include
 
-obj/%-pthread.o: %.cpp
+%-pthread.o: %.cpp
 	$(CXX) $(PTHREAD_CFLAGS) -c $< -o $@ -I$(HOME)/include
 
 $(TEST_NAME)-pthread: $(PTHREAD_OBJS)

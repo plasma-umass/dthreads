@@ -1,5 +1,5 @@
-#ifndef __PROF_H__
-#define __PROF_H__
+#ifndef DTHREADS_PROF_H__
+#define DTHREADS_PROF_H__
 
 /*
   This program is free software; you can redistribute it and/or modify

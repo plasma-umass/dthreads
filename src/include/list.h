@@ -1,5 +1,5 @@
-#ifndef __LIST_H__
-#define __LIST_H__
+#ifndef DTHREADS_LIST_H__
+#define DTHREADS_LIST_H__
 /*
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

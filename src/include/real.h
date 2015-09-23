@@ -1,5 +1,5 @@
-#ifndef _REAL_H_
-#define _REAL_H_
+#ifndef DTHREADS_REAL_H_
+#define DTHREADS_REAL_H_
 
 #include <sys/types.h>
 #include <pthread.h>

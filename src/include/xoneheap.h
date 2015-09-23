@@ -21,8 +21,8 @@
 
  */
 
-#ifndef _XONEHEAP_H_
-#define _XONEHEAP_H_
+#ifndef XONEHEAP_H_
+#define XONEHEAP_H_
 
 /**
  * @class xoneheap

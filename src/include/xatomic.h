@@ -29,8 +29,8 @@
  * @author Tongping Liu <http://www.cs.umass.edu/~tonyliu>
  */
 
-#ifndef _XATOMIC_H_
-#define _XATOMIC_H_
+#ifndef XATOMIC_H_
+#define XATOMIC_H_
 
 class xatomic {
 public:

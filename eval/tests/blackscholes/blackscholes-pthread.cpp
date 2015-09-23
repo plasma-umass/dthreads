@@ -360,7 +360,7 @@ int main (int argc, char **argv)
     {
         int _M4_i;
         for ( _M4_i = 0; _M4_i < MAX_THREADS; _M4_i++) {
-            _M4_threadsTable[_M4_i] = -1;
+	  _M4_threadsTable[_M4_i] = (pthread_t) -1;
         }
     }
 ;

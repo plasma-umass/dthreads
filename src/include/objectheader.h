@@ -1,5 +1,5 @@
-#ifndef __OBJECTHEADER_H__
-#define __OBJECTHEADER_H__
+#ifndef DTHREADS_OBJECTHEADER_H__
+#define DTHREADS_OBJECTHEADER_H__
 
 /*
   This program is free software; you can redistribute it and/or modify

@@ -21,8 +21,8 @@
 
  */
 
-#ifndef _PRIVATEHEAP_H_
-#define _PRIVATEHEAP_H_
+#ifndef DTHREADS_PRIVATEHEAP_H_
+#define DTHREADS_PRIVATEHEAP_H_
 /**
  * @file privateheap.h
  * @brief A heap for Grace's internal allocation needs.

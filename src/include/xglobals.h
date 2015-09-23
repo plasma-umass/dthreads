@@ -21,8 +21,8 @@
 
  */
 
-#ifndef _XGLOBALS_H_
-#define _XGLOBALS_H_
+#ifndef XGLOBALS_H_
+#define XGLOBALS_H_
 
 #include "xdefines.h"
 #include "xpersist.h"

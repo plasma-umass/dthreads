@@ -1,6 +1,6 @@
 // -*- C++ -*-
-#ifndef _XPAGEENTRY_H_
-#define _XPAGEENTRY_H_
+#ifndef XPAGEENTRY_H_
+#define XPAGEENTRY_H_
 /*
   This program is free software; you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by

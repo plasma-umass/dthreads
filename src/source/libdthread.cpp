@@ -362,9 +362,9 @@ ssize_t read(int fd, void *buf, size_t count) {
 void * mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset) {
 	int newflags = flags;
 
-	if (initialized == true && (flags & MAP_PRIVATE)) {
+	if ((initialized == true) && (flags & MAP_PRIVATE)) {
 		//		newflags = (flags & ~MAP_PRIVATE) | MAP_SHARED;
-		printf("flags %x and newflags %x\n", flags, newflags);
+	  //		printf("flags %x and newflags %x\n", flags, newflags);
 	}
 	return WRAP(mmap)(addr, length, prot, newflags, fd, offset);
 }

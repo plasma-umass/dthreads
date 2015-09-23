@@ -1,5 +1,5 @@
-#ifndef __XPAGEINFO_H__
-#define __XPAGEINFO_H__
+#ifndef XPAGEINFO_H__
+#define XPAGEINFO_H__
 
 struct xpageinfo {
 	int pageNo;

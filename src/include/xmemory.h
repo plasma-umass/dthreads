@@ -24,8 +24,8 @@
  * @author Charlie Curtsinger <http://www.cs.umass.edu/~charlie>
  */
 
-#ifndef _XMEMORY_H_
-#define _XMEMORY_H_
+#ifndef XMEMORY_H_
+#define XMEMORY_H_
 
 #include <signal.h>
 

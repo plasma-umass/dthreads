@@ -1,7 +1,7 @@
 // -*- C++ -*-
 
-#ifndef _INTERNALHEAP_H_
-#define _INTERNALHEAP_H_
+#ifndef DTHREADS_INTERNALHEAP_H_
+#define DTHREADS_INTERNALHEAP_H_
 
 /*
   This program is free software; you can redistribute it and/or modify

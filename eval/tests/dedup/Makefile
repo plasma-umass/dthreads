@@ -13,7 +13,7 @@ TEST_ARGS = -c -p -f -t $(THREADS) -i $(DATASET_HOME)/dedup/media.dat -o output.
 
 #CFLAGS = -D_XOPEN_SOURCE=600 -Iinclude -DENABLE_THREADS -DPARALLEL -std=gnu99 -D_XOPEN_SOURCE=600 -DMD32_REG_T=int -funroll-loops -fprefetch-loop-arrays -fstrict-aliasing -Wstrict-aliasing -O5 -fkeep-inline-functions -DOPENSSL_THREADS -D_REENTRANT -DL_ENDIAN -DTERMIO -DUSE_MMAP
 CFLAGS = -Iinclude -DENABLE_THREADS -DPARALLEL -std=gnu99 -DMD32_REG_T=int -D_REENTRANT -DL_ENDIAN -DUSE_MMAP -D_XOPEN_SOURCE=600
-LIBS = -Llib -lssl -lz -lcrypto
+LIBS = -lssl -lz -lcrypto # -Llib
 
 DMP_O_GRAN = 6
 DMP_O_QUANTUM = 100000

@@ -1,6 +1,6 @@
 // -*- C++ -*-
-#ifndef _XBITMAP_H_
-#define _XBITMAP_H_
+#ifndef XBITMAP_H_
+#define XBITMAP_H_
 
 /*
   This program is free software; you can redistribute it and/or modify

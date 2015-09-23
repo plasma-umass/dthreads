@@ -1,5 +1,5 @@
-#ifndef __DETERM_H__
-#define __DETERM_H__
+#ifndef DTHREADS_DETERM_H__
+#define DTHREADS_DETERM_H__
 
 /*
   This program is free software; you can redistribute it and/or modify

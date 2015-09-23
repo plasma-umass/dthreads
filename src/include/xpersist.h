@@ -140,6 +140,8 @@ public:
 	       (void *) NULL, size());
       perror ("Persistent memory creation:");
       ::abort();
+    } else {
+      fprintf (stderr, "SUCCESS.\n");
     }
 
     // If we specified a start address (globals), copy the contents into the

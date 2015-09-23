@@ -21,8 +21,8 @@
 
  */
 
-#ifndef _XADAPTHEAP_H_
-#define _XADAPTHEAP_H_
+#ifndef XADAPTHEAP_H_
+#define XADAPTHEAP_H_
 
 /**
  * @class xadaptheap

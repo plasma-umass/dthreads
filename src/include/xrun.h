@@ -29,8 +29,8 @@
  * @author Charlie Curtsinger <http://www.cs.umass.edu/~charlie>
  */
 
-#ifndef _XRUN_H_
-#define _XRUN_H_
+#ifndef XRUN_H_
+#define XRUN_H_
 
 // Common defines
 #include "xdefines.h"

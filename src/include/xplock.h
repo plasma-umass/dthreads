@@ -1,5 +1,5 @@
-#ifndef _XPLOCK_H_
-#define _XPLOCK_H_
+#ifndef XPLOCK_H_
+#define XPLOCK_H_
 
 #if !defined(_WIN32)
 #include <pthread.h>

@@ -11,6 +11,10 @@
 #include "dmp.h"
 #endif
 
+#if defined(__APPLE__) // EDB
+#include "ptbarrier.h"
+#endif
+
 #include <stdio.h>
 #include <iostream>
 #include <fstream>
@@ -78,7 +82,7 @@ static int* center_table; //index table of centers
 
 static int nproc; //# of threads
 
-static pthread_mutex_t mutex;
+static pthread_mutex_t myMutex;
 static pthread_cond_t cond;
 #ifdef TBB_VERSION
 tbb::cache_aligned_allocator<float> memoryFloat;
@@ -738,9 +742,11 @@ float pspeedy(Points *points, float z, long *kcenter, int pid, pthread_barrier_t
   if( pid != 0 ) { // we are not the master threads. we wait until a center is opened.
     while(1) {
 #ifdef ENABLE_THREADS
-      pthread_mutex_lock(&mutex);
-      while(!open) pthread_cond_wait(&cond,&mutex);
-      pthread_mutex_unlock(&mutex);
+      pthread_mutex_lock(&myMutex);
+      while(!open) {
+	pthread_cond_wait(&cond,&myMutex);
+      }
+      pthread_mutex_unlock(&myMutex);
 #endif
       if( i >= points->num ) break;
       for( int k = k1; k < k2; k++ )
@@ -764,11 +770,11 @@ float pspeedy(Points *points, float z, long *kcenter, int pid, pthread_barrier_t
       if( to_open )  {
 	(*kcenter)++;
 #ifdef ENABLE_THREADS
-	pthread_mutex_lock(&mutex);
+	pthread_mutex_lock(&myMutex);
 #endif
 	open = true;
 #ifdef ENABLE_THREADS
-	pthread_mutex_unlock(&mutex);
+	pthread_mutex_unlock(&myMutex);
 	pthread_cond_broadcast(&cond);
 #endif
 	for( int k = k1; k < k2; k++ )  {
@@ -788,11 +794,11 @@ float pspeedy(Points *points, float z, long *kcenter, int pid, pthread_barrier_t
       }
     }
 #ifdef ENABLE_THREADS
-    pthread_mutex_lock(&mutex);
+    pthread_mutex_lock(&myMutex);
 #endif
     open = true;
 #ifdef ENABLE_THREADS
-    pthread_mutex_unlock(&mutex);
+    pthread_mutex_unlock(&myMutex);
     pthread_cond_broadcast(&cond);
 #endif
   }
@@ -2025,7 +2031,7 @@ int main(int argc, char **argv)
 #endif
 
 #ifdef ENABLE_THREADS
-  pthread_mutex_init(&mutex, NULL);
+  pthread_mutex_init(&myMutex, NULL);
   pthread_cond_init(&cond, NULL);
 #endif
 

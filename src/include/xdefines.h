@@ -29,8 +29,8 @@
  * @author Charlie Curtsinger <http://www.cs.umass.edu/~charlie>
  */
 
-#ifndef _XDEFINES_H_
-#define _XDEFINES_H_
+#ifndef XDEFINES_H_
+#define XDEFINES_H_
 #include <sys/types.h>
 #include <syscall.h>
 #include <stdlib.h>
