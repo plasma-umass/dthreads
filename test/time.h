@@ -1,5 +1,5 @@
-#ifndef __TIME_H__
-#define __TIME_H__
+#ifndef DTHREADS_TIME_H
+#define DTHREADS_TIME_H
 
 struct timeinfo {
 	unsigned long low;
